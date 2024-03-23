@@ -1,0 +1,25 @@
+<!--/edit-->
+<h1>Editind Book</h1>
+
+<%= form_with model: @book do |f| %>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+  
+   <div class="push">
+     <%= f.submit 'Update Book' %>
+   </div>
+<% end %>
+
+<div class="box">
+  <%= link_to 'Show', book_path(@book.id) %>
+</div>
+<div class="box">
+<p>|</p>
+</div>
+<div class="box">
+<%= link_to 'Back', books_path %>
+</div>
